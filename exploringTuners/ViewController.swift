@@ -55,7 +55,7 @@ class ViewController: UIViewController, TunerDelegate{
         //updating every 300th of a second - NSTimer says so that lives in a file in this massive project.
         
         //only registers a note if it is above the amplitude threshold of 0.1
-        if (output.amplitude > 0.2) {
+        if (output.amplitude > 0.01) {
             noteSlider.value = output.frequency
             frequencyLabel.text = output.pitch + String(output.octave)
             frequencyLabel.font = UIFont (name: "CourierNewPS-ItalicMT", size: 30)
